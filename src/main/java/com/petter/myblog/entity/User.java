@@ -8,6 +8,9 @@ import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 /**
  * <p>
  * 
@@ -26,6 +29,8 @@ public class User implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @NotBlank(message = "不能为空")
+    @Email(message = "邮箱格式不正确")
     private String username;
 
     private String avatar;

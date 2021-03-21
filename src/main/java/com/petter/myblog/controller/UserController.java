@@ -31,7 +31,7 @@ public class UserController {
         return Result.success(user);
     }
 
-    @PostMapping("/save")
+    @GetMapping("/save")
     public Result save(@Validated @RequestBody User user) {
         return Result.success(user);
     }

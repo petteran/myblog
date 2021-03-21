@@ -91,6 +91,14 @@ public class JwtFilter extends AuthenticatingFilter {
         return false;
     }
 
+    /**
+     * 跨域处理
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
+
     @Override
     protected boolean preHandle(ServletRequest request, ServletResponse response) throws Exception {
 

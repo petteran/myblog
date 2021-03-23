@@ -1,6 +1,9 @@
 package com.petter.myblog.common.lang;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @author anpetter
@@ -13,8 +16,8 @@ import lombok.Data;
 
 
 @Data
-public class Result {
-    private int code;// 200是正常，非200表示异常
+public class Result   {
+    private Integer code;// 200是正常，非200表示异常
     private String msg;
     private Object data;
 

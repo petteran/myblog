@@ -5,8 +5,12 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * <p>
@@ -28,10 +32,13 @@ public class Blog implements Serializable {
 
     private Long userId;
 
+    @NotBlank(message = "title 必填")
     private String title;
 
+    @NotBlank(message = "description必填")
     private String description;
 
+    @NotBlank(message = "content必填")
     private String content;
 
     private LocalDateTime created;
